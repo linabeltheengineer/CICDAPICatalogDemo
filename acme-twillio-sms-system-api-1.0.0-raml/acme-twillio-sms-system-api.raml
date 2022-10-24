@@ -1,0 +1,56 @@
+#%RAML 1.0
+title: acme-twillio-sms-system-api
+description: Send sms dynamically.
+version: 1.0.0
+mediaType: 
+- application/json
+baseUri: api/sms/{version}
+  
+types:
+  email:
+    properties:
+      toPhone: string
+      messageBody: string
+      fromPhone: string
+      messageSubject: string
+      
+      
+  error:
+    properties:
+      errorcode?: string
+      errormessage?: string
+      errordescription?: string
+/sms:
+  
+  post:
+    description: Send Email
+    body:
+      application/json:
+        type: email
+        example:
+          
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              { 
+                "message": "SMS Sent"
+              }
+
+
+  
+              
+
+
+
+
+      
+
+          
+   
+
+      
+
+
+    
