@@ -111,3 +111,41 @@ Add to the descriptor file
             version: 1.0.0  
             apiVersion: v1
 
+## Example of JenkinsFile / Groovy Pipeline Script
+
+    pipeline {
+        agent any
+         tools {nodejs "NPM"}
+        
+        stages {
+            stage('git checkout') {
+                steps {
+                    git branch: "main", url: 'https://github.com/linabeltheengineer/CICDAPICatalogDemo.git'
+                    sh 'ls'
+                }
+            }
+            stage('Build Artifacts') {    
+                steps {
+                     // building
+                      sh 'ls'
+                }
+            }
+            stage('API Cataloging') {    
+                steps 
+                    { 
+                        sh 'npm install'
+                        sh 'api-catalog conf username API-CATALOG-DEMO'
+                        sh 'api-catalog conf password acdDemo2022'
+                        sh 'api-catalog conf organization b22c9db6-5750-4ffc-a25a-793d95e35c54'
+                        sh 'api-catalog publish-asset'
+                    }
+                }
+            
+             stage('Deploy') {    
+                steps {
+                    // lots of deploying 
+                     sh 'ls'
+                }
+            }
+    }
+    }
