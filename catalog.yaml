@@ -1,7 +1,7 @@
 #%Catalog Descriptor 1.0
 triggerConditions:
   version:
-    - 1.0.0
+    - 1.0.1
  
 versionStrategyConditions:
       minorIncrease:
@@ -10,11 +10,6 @@ versionStrategyConditions:
 projects:
   - main: acme-twillio-sms-system-api-1.0.0-raml/acme-twillio-sms-system-api.raml
     assetId: acme-twillio-sms-system-api
-    version: 1.0.0
+    version: 1.0.1
     apiVersion: v1
-    
-projects:
-  - main: acme-twillio-sms-system-api-1.0.0-raml/acme-twillio-sms-system-api.raml
-    assetId: acme-twillio-sms-system-api
-    version: 1.0.0
-    apiVersion: v1
+
