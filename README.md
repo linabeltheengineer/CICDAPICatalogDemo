@@ -39,7 +39,7 @@ Go to https://nodejs.org
     api-catalog conf host anypoint.mulesoft.com 
     api-catalog conf organization <org-id>
 
-## Or Create api-catalog CLI Parameters using Username and Password
+## Create api-catalog CLI Parameters using Username and Password
 
     api-catalog conf username <username>  
     api-catalog conf password <password>  
@@ -49,7 +49,7 @@ Go to https://nodejs.org
 
 *Make sure that the user has "API CATALOG CONTRIBUTOR" permission*
 
-## Getting help on Conf and locating the conf.json file
+## Get help on Conf and locate the conf.json file
 
     api-catalog conf —help  
 
@@ -57,7 +57,7 @@ Go to https://nodejs.org
 
     api-catalog create-descriptor -d catalog.yaml
 
-## Or you can choose not to name the api descriptor file
+## Create default name for the api descriptor file
 
     api-catalog create-descriptor
 
