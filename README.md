@@ -31,8 +31,26 @@ Go to https://nodejs.org
 ## Create connected app
 
   https://docs.mulesoft.com/access-management/connected-apps-overview
+  
+## Create api-catalog CLI Parameters using Connected Apps (Recommended for MFA enabled)
 
-## Configure the api-catalog CLI parameters
+    api-catalog conf client_id <client_id>  
+    api-catalog conf client_secret <client_secret>  
+    api-catalog conf bearer <token>
+    api-catalog conf organization <org-id>
+    
+### To get the connected app bearer token, run the following:
+
+    curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+    "client_id" : "<client_id>",
+    "client_secret": "<client_secret",
+    "grant_type" : "client_credentials"
+    }'
+
+
+## Configure the api-catalog CLI parameters using organization client credentials
 
     api-catalog conf client_id <client_id>  
     api-catalog conf client_secret <client_secret>  
@@ -45,7 +63,6 @@ Go to https://nodejs.org
     api-catalog conf password <password>  
     api-catalog conf organization <org-id>
 
-  
 
 *Make sure that the user has "API CATALOG CONTRIBUTOR" permission*
 
