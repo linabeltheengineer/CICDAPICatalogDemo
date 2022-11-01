@@ -45,7 +45,7 @@ Go to https://nodejs.org
     --header 'Content-Type: application/json' \
     --data-raw '{
     "client_id" : "<client_id>",
-    "client_secret": "<client_secret",
+    "client_secret": "<client_secret>",
     "grant_type" : "client_credentials"
     }'
 
